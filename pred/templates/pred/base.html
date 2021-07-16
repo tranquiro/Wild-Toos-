@@ -1,0 +1,77 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <title>Wild Toos!</title>
+        <style>
+          body{
+            margin: 0px;
+            height: 1024px;
+          }
+          header {
+            background-color: hotpink;
+          }
+          .navbar-brand{
+            color: white;
+            font-size: 24px;
+          }
+          .navbar-nav{
+            margin: 0 0 0 auto;
+          }
+          footer {
+            background-color: hotpink;
+            height: 50px;
+            text-align: center;
+          }
+          .fixed-bottom{
+            padding-top: 15px;
+          }
+          .form-group{
+            padding-top: 20px;
+          }
+          .form-horizontal{
+            margin-top: 30px;
+            border-top: 1ch solid gray;
+          }
+          .about-detail{
+            font-size: 16px;
+          }
+          .btn{
+            font-size: 2em;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+          .message{
+            margin-left:30px ;
+            font-size: 18px;
+          }
+          .image{
+            margin-left:30px ;
+          }
+          .gazou{
+            margin-left:30px ;
+            font-size: 16px;
+          }
+        </style>
+    </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark">
+            <h4 class="navbar-brand " >Wild Toos!</h4>
+      </nav>
+    </header>
+      <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer class="fixed-bottom">
+      @starfruits_musou
+    </footer>
+  </body>
+</html>
