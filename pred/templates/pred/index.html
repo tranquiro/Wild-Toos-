@@ -11,7 +11,7 @@
         <div class="about">
             <h1 style="margin-left:30px ;">about</h1>
             <div class="about-detail" style="margin-left: 60px;">
-                <h3>開発経緯・使い方</h3>
+                <h3>開発経緯</h3>
                 <ul>
                     <li>
                         中京テレビ「オドぜひ」という番組でオードリー春日とスギちゃんが似ていると取り上げられていた。
@@ -19,17 +19,14 @@
                     <li>
                         AIならオードリー春日とスギちゃんの見極めが出来るのかどうかが知りたい！と思い、作成。
                     </li>
-                    <br>
-                    <br>
-                    <li>
-                        以下の「ファイルを選択」から画像を選択　&　「分類する」を押す
-                    </li>
                 </ul>
+                    <br>
+                    <br>
+                    <h3>以下の「ファイルを選択」から画像を選択　&　「分類する」を押す</h3>
+                
             </div>
         </div>
-        <div class="odozehi">
-            <img src="{% static "image/odozehi.jpg"%}"  style="margin-left: 30px; position: absolute; top: 1080px; right:100px;"/>
-        </div>
+
     </div>
 
     <form method="POST" action="{% url 'index' %}" enctype="multipart/form-data" class="form-horizontal">

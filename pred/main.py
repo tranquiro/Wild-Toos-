@@ -18,7 +18,7 @@ def detect(upload_image):
     # 設定からモデルファイルのパスを取得
     model_file_path = settings.MODEL_FILE_PATH
     # kerasでモデルを読み込む
-    model = keras.models.load_model(model_file_path)
+    model = keras.models.load_model(model_file_path, compile=False)
     # アップロードされた画像ファイルをメモリ上でOpenCVのimageに格納
     image = np.asarray(Image.open(upload_image))
     # 画像をOpenCVのBGRからRGB変換
@@ -74,10 +74,10 @@ def detect_who(model, face_image):
     predicted = model.predict(face_image)
     # 結果
     name = ""
-    result = f"スギちゃん の可能性:{predicted[0][0]*100:.2f}% / オードリー春日 の可能性:{predicted[0][1]*100:.2f}%"
+    result = f"オードリー春日の可能性:{predicted[0][0]*100:.2f}% / スギちゃん の可能性:{predicted[0][1]*100:.2f}%"
     name_number_label = np.argmax(predicted)
     if name_number_label == 0:
-        name = "Sugityan"
-    elif name_number_label == 1:
         name = "Kasuga"
+    elif name_number_label == 1:
+        name = "Sugityan"
     return (name, result)
